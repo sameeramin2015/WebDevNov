@@ -1,14 +1,19 @@
 # Web Development Class November 04/10/2021
+[3 subjects 2 weeks]
 - Html5
 - Css
 - Bootstrap4
-- Javascript (ES5, ES6, ES7) 
-- Node.js
+
+- Javascript (ES5, ES6, ES7) 1.5 month
+
+- Node.js [1.5 month]
 	- Express.js
-- SaSS
-- MongoDB
-- React.js
-- Deployment Theory
+
+- SaSS [4 days]
+- MongoDB [2 weeks]
+- React.js [1 month]
+- Deployment Theory [1-2 days]
+- Sails.js [introduction only]
   
 # Software Requirements
 
