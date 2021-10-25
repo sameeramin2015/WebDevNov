@@ -11,10 +11,10 @@
 
 - SaSS [4 days]
 - MongoDB [2 weeks]
-- React.js [1 month]
+- React.js [1.5 month]
 - Deployment Theory [1-2 days]
 - Sails.js [introduction only]
-  
+
 # Software Requirements
 
 - Visual Studio Code [https://code.visualstudio.com/]
