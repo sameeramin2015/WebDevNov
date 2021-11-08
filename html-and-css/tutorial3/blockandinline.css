@@ -14,3 +14,22 @@ span.custom{
     background-color: indigo;
     color: lightcyan;
 }
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+}
+.child{
+    background-color: darkslategray;
+    padding: 4em;
+    margin: 1px;
+}
+#wrapper{
+    background-color: gold;
+}
+video{
+    border-radius: 5px;
+    
+}
