@@ -1,0 +1,11 @@
+div {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+input::placeholder{
+    color: red;
+}
+input{
+    border: solid 1px green;
+}

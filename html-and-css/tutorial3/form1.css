@@ -1,0 +1,17 @@
+form{
+    max-width: 700px;
+}
+.child{
+    display: flex;
+    padding: 1em;
+    width: 70%;
+    
+}
+label{
+    text-align: right;
+    padding: 0.4em;
+}
+.bgTest{
+background: url("");
+
+}
