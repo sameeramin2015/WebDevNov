@@ -1,0 +1,16 @@
+span{
+    /* convert inline to block level element*/
+    display: block;
+}
+div{
+    background-color: red;
+    color:yellow;
+}
+div.custom{
+    background-color: green;
+    color: white;
+}
+span.custom{
+    background-color: indigo;
+    color: lightcyan;
+}
