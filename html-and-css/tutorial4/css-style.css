@@ -1,0 +1,50 @@
+/* Selectors*/
+
+*{
+    /*select Everything*/
+    background-color: darkslateblue;
+}
+body,html{
+    /* reset default spacing value*/
+    padding: 0;
+    margin: 0;
+
+}
+.row{
+    border: 1px solid black;
+    padding: 1em;
+}
+#maincontainer{
+    background-color: grey !important;
+    /*border: 1px solid red;
+    padding: 10px;*/
+    border-bottom: red;
+    border-bottom-width:1px;
+    border-bottom-style: dashed;
+    padding: 10px;
+    border-radius: 10px;
+
+
+}
+input{
+    background-color: black;
+    color: white;
+
+}
+input[name=username]{
+    background-color: green;
+    color: black;
+}
+li{
+    color: red;
+    list-style-type: none;
+}
+li[name=item]{
+    color: green;
+    list-style-type: circle;
+}
+#maincontainer > .row >.col:nth-child(2){
+    background-color: maroon !important;
+    padding: 3px;
+    margin: 3px;
+}
