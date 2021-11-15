@@ -1,0 +1,15 @@
+html.body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: darkorchid;
+}
+.container{
+    padding: 1em;
+    color: white;
+}
+.myicon{
+    font-size: 100px;
+    color: red;
+}

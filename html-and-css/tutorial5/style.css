@@ -17,8 +17,11 @@ html, body{
     border: 10px solid red;
     outline: 10px solid green;
 }
+/*https://fonts.google.com/*/
+
 .box > p{
     text-align: right;
     direction: rtl;
-    font-family: "Blacksignature";
+    /*font-family: "Blacksignature";*/
+    font-family: 'Indie Flower', cursive;
 }
