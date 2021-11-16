@@ -16,6 +16,9 @@ body{
 }
 .container > p{
     column-count: 3;
+    text-align: justify;
+    margin: 10px;
+    
 }
 /*
 .box{
