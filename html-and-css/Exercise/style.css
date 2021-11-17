@@ -3,15 +3,28 @@ html,body{
     margin: 0;
 }
 body{
-    background-color: dimgrey;
+    background-color: white;
+    text-decoration: none;
 }
 .nav {
     display: inline-block; 
     list-style-type: none;
-    background-color: darkgrey;
+    background-color: white;
     width: 100%;
     border: 1px solid darkred;
-    text-decoration: none;
+   
+    
+}
+.icon{
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    padding-top: 100px;
+    padding-left: 650px;
+   
     
 }
 .center {
@@ -29,9 +42,12 @@ ul{
     list-style-type: none;
     text-align: center;
     
+    
 }
 li{
     display: inline;
+    font-size: large;
+    
     
 }
 a{
@@ -46,61 +62,110 @@ a:hover{
 footer{
     display: inline-block; 
     list-style-type: none;
-    background-color: darkgrey;
+    background-color: white;
     width: 100%;
     text-align: center;
     border: 1px solid darkred;
 
 }
-.section{
+
+p{
+    display: flex;
+    flex-direction: column;
+}
+
+.img1{
+    width: 250px;
+    height: 200px;
+    padding: 50px 10px 10px 20px;
+}
+.img2{
     display: flex;
     float: left;
-    width: 49.7%;
-    border: 1px solid darkred;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    margin-top: 350px;
+    margin-left: 280px;
+}
+h3{
+    padding-top: 50px;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: left;
+    width: 49.4%;
+    height: 500px;
     margin: 0;
+    
+    
 }
 .aside{
     display: flex;
     float: right;
     width: 50%;
-    border: 1px solid darkred;
     margin: 0;
+    
+}
+.p1{
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 280px;
+}
+.p2{
+    display: flex;
+    float: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 280px;
+    width: 400px;
+    text-align: justify;
 }
 .link{
     text-align: center;
-    margin-top: 230px;
-    margin-left: 200px;
+    position: relative;
+    margin-top: 400px;
+    margin-left: 180px;
+    margin-right: 10px;
     background-color: yellowgreen;
     border-radius: 5px;
-    width: 100px;
-    height: 40px;
+    width: 90px;
+    height: 20px;
     padding: 10px;
-    display: flex;
-    float: right;
+    
 }
 
-@media screen and (max-width:600px){
+@media only screen and (max-width:600px){
    
 }
 
-@media screen and (max-width:2560px){
+@media only screen and (max-width:2560px){
     
 }
-@media screen and (max-width:1044px){
+@media only screen and (max-width:1044px){
    
 }
-@media screen and (max-width:1024px){
+@media only screen and (max-width:1024px){
     
 }
-@media screen and (max-width:768px){
+@media only screen and (max-width:768px){
     
 }
-@media screen and (max-width:425px){
+@media only screen and (max-width:425px){
     
 }
-@media screen and (max-width:375px){
+@media only screen and (max-width:375px){
    
 }
-@media screen and (max-width:320px){
+@media only screen and (max-width:320px){
     
 }
