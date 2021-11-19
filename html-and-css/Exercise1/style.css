@@ -1,0 +1,94 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: rgb(51, 48, 48);
+    display: flex;
+    color: white;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed goldenrod;
+    
+}
+body{
+    background-color: rgb(51, 48, 48);
+}
+.logo> img{
+    width: 200px;
+    height: 50px;
+}
+ul{
+    list-style-type: none;
+    text-decoration: none;
+}
+li{
+    display: inline;
+    padding: 6px;
+    font-size: 18px;
+}
+nav > ul > li:hover{
+    background-color: darkgray;
+    color: darkgoldenrod;
+    list-style-type: none;
+    padding: 0.5em;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main{
+    display: flex;
+    padding: 1em;
+    color: white;
+}  
+main > section{
+    display: flex;
+    padding: 1em;
+    width: 75%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+main > section > article{
+    padding-top: 100px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.sidebare{
+    display: flex;
+    width: 25%;
+    border-left: 1px dashed goldenrod;
+    padding: 1em;
+}
+footer > p{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    padding: 1em;
+    justify-content: space-between;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-top: 1px dashed goldenrod;
+    align-items: center;
+
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
+.blog{
+    padding: 0.5em;
+    text-align: left;
+    position: absolute;
+}
+footer > p > a:hover{
+    color: goldenrod;
+}
+footer > p > a:visited{
+    color: white;
+}
