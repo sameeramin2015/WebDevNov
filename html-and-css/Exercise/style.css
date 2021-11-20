@@ -132,9 +132,9 @@ h3{
 }
 .link{
     text-align: center;
-    position: relative;
-    margin-top: 400px;
-    margin-left: 180px;
+    position: absolute;
+    margin-top: 430px;
+    margin-left: 500px;
     margin-right: 10px;
     background-color: yellowgreen;
     border-radius: 5px;

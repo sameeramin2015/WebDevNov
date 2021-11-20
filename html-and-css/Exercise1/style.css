@@ -84,10 +84,16 @@ img{
 .blog{
     padding: 0.5em;
     text-align: left;
-    position: absolute;
+    position: fixed;
+}
+footer > p >a:link{
+    color:greenyellow
 }
 footer > p > a:hover{
     color: goldenrod;
+}
+footer > p > a:active{
+    color: lightseagreen;
 }
 footer > p > a:visited{
     color: white;
