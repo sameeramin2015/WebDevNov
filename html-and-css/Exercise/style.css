@@ -18,7 +18,7 @@ body{
 .icon{
     display: flex;
     float: left;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     position: absolute;
     height: 80px;
     width: 80px;
