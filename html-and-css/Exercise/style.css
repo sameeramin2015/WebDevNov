@@ -4,7 +4,7 @@ html,body{
 }
 body{
     background-color: white;
-    text-decoration: none;
+    
 }
 .nav {
     display: inline-block; 
@@ -12,7 +12,7 @@ body{
     background-color: white;
     width: 100%;
     border: 1px solid darkred;
-   
+    text-decoration: none;
     
 }
 .icon{
@@ -43,10 +43,12 @@ ul{
     text-align: center;
     
     
+    
 }
 li{
     display: inline;
     font-size: large;
+    
     
     
 }

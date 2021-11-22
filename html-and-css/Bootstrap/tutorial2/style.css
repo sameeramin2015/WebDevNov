@@ -1,0 +1,5 @@
+ul > li:hover{
+    background-color: palevioletred;
+    color: green;
+    padding: 10px;
+}
