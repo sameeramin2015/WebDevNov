@@ -1,0 +1,15 @@
+input[type="text"] {
+    width: 300px;
+}
+input[type="email"] {
+    width: 331px;
+}
+#phone{
+    width: 330px;
+}
+#address{
+    width: 322px;
+}
+#legend{
+    text-align: center;
+}
