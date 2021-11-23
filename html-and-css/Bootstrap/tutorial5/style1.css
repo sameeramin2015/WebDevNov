@@ -4,3 +4,7 @@ height: 100vh;
 object-position: 0 10%;
 overflow: hidden;
 }
+#size{
+    font-size: 40px;
+    color: red;
+}
