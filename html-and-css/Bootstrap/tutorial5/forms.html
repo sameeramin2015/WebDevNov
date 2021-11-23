@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark">
+<div class="container text-light">
+    <div class="mb-3 input-group">
+    <label type="button for="user' class="input-group-text">Username</label>
+    <input type="text" id="user" class="form-control bg-primary text-light" placeholder="username"/ >
+</div>
+
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="username"/>
+    <label class="input-group-text">@</label>
+    <input type="text" class="form-control" placeholder="domain.com"/>
+
+</div>
+<div class="input-group">
+    <label class="input-group-text">Pick a Color</label>
+    <input type="color" class="form-control-color"/>
+</div>
+
+<select class="form-select-sm">
+    <option selected>Please select a city</option>
+    <option value="Brussel">Brussel</option>
+    <option value="Gent">Gent</option>
+    <option value="Leuven">Leuven</option>
+    <option value="Alst">Alst</option>
+</select><br>
+
+<select class="form-select-sm" multiple>
+    <option selected>Please select a city</option>
+    <option value="Brussel">Brussel</option>
+    <option value="Gent">Gent</option>
+    <option value="Leuven">Leuven</option>
+    <option value="Alst">Alst</option>
+</select>
+<div class="form-check">
+    <input class="form-check-input bg-danger" type="checkbox"/>
+    <label class="form-check-label">Male</label>
+</div>
+<div class="form-check">
+    <input class="form-check-input bg-warning" type="checkbox"/>
+    <label class="form-check-label">Female</label>
+</div>
+</body>
+</html>
