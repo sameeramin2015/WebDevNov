@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(46, 44, 44);
+}
+#bg{
+    background-image: url('../Exercise2/Batman-5-Most-Powerful-Versions.png');
+    background-size: cover;
+    
+}
+img{
+    height: 300px;
+}
+#id{
+    height: 38px;
+    width: 60px;
+    justify-content: center;
+    border-radius: 4px;
+}
