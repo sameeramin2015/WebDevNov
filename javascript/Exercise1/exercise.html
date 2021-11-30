@@ -12,19 +12,30 @@
     
     <table class="table table-striped">
         <tr bg-info>
-            <td>Name</td>
-            <td>LastName</td>
-            <td>Age</td>
-            <td>DateOfBirth</td>
-            <td>Nationality</td>
-            <td>Address</td>
-            <td>Student</td>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>DateOfBirth</th>
+            <th>Nationality</th>
+            <th>Address</th>
+            <th>Student</th>
+        </tr>
+        <tr bg-info>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <thbody id="myTable">
 
         </thbody>
     </table>
     <script src="exercise1.js">
+
+<!--
         var myArray = [{
     Name:"Sameer", 
     LastName:"Jahanzeb",
@@ -35,10 +46,10 @@
     Student: true,
 }]
 
-        buildTable(myArray)
-        function buildTable (data){
+        
+        function buildTable (myArray){
             var table = document.getElementById(myTable)
-            for (var i =0; i < data.lenght; i++){
+            for (var i = 0; i < myArray.lenght; i++){
                 var row = <tr>
                             <td>${data[i].Name}</td>
                             <td>${data[i].LastName}</td>
@@ -54,5 +65,6 @@
 
         }
     </script>
+    
 </body>
 </html>
