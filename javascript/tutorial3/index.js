@@ -139,11 +139,26 @@ result = person <= 18? 'yes he is allowed to drink alcohol':'no he is not allowe
 on other example
 */
 
-var student = {
+var student = [{
     name:'Jack',
-    age: 18
-}
+    age: 17
+},
+{
+    name:'Mike',
+    age: 19
+}]
 
 
 result = student.name != undefined ?(student.age >=18? 'yes he is allowed to drink alcohol':'no he is not allowed'):'student name is not exists';
-console.log(result)
+
+//if(student.age[0])
+if(student[1].name === 'Jack' && student[1].age >=18){
+    console.log('True')
+}
+if(student[1].age >= 18 && student[1].age <=30){
+
+console.log('Young man!')
+}
+else{
+    console.log('not Young man!')
+}
