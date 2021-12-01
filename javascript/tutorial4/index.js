@@ -37,7 +37,7 @@ if (isNaN(userInput)){ // isNAN not a number method
 else if (userInput%2 ==0){
     console.log('this is an even number')
 } 
-else if (userInput%2 !==0){
+else if (userInput%2 ==1){
     console.log('this is an odd number')
 }
 

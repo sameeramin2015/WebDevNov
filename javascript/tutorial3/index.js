@@ -31,7 +31,7 @@ result = undefined == null // true
  result = false === false // true
  result = false === true // false 
 
- // not equal to => "!=" check only value
+ // not equal to "!=" check only value
 
  result = 1 != 1 //false
  result = 1 != 2 //true
@@ -108,7 +108,7 @@ result = undefined == null // true
 
  // OR operator "||"
  result = 1===1 || 10>100 // true because in or operator one value should be true
- result = 1 != 10 || 1>10 // false
+ result = 1 != 10 || 1>10 // true
  result = 1>10 || 10>100 // false
 
  // NOT operator "!"
@@ -124,9 +124,9 @@ result = undefined == null // true
  result = "computer" === "laptop"? 'yes its true':'no its false'
  result = 1 ===1? (2===2? 'yes':'no'):false
  /*
- his age is under 18 allowed to drink alcohol
+ his age is 18 allowed to drink alcohol
     true= 18 allowed to drink alcohol
-    false = less than 18 not allowed alcohol
+    false = less than 18 not allowed to drink alcohol
 
 
  */
@@ -141,11 +141,11 @@ on other example
 
 var student = [{
     name:'Jack',
-    age: 17
+    age: 18
 },
 {
     name:'Mike',
-    age: 19
+    age: 18
 }]
 
 
@@ -162,3 +162,6 @@ console.log('Young man!')
 else{
     console.log('not Young man!')
 }
+
+
+console.log(result)
