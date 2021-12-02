@@ -91,4 +91,5 @@ GetNumber()
      forward : function(){result1.innerHTML='Forward'},
      backward : function(){result1.innerHTML='backward...'},
  }
- //AutoController.backward()
+ //AutoController.backward() this funciton should be copied to button elements
+ 
