@@ -40,4 +40,4 @@ const changDirection = {
     backward:function (){result2.innerHTML='backward'},
 
 }
-changDirection.backward()
+changDirection.backward
