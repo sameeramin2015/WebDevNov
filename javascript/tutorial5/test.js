@@ -41,3 +41,7 @@ const changDirection = {
 
 }
 changDirection.backward
+1 != true
+
+
+1 != true
