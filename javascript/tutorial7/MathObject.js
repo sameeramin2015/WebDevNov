@@ -24,7 +24,20 @@ result = Math.min(5,6,7,8,9,1,0,1,2,3,1,4) // 0
  //10-100
  result = Math.round(Math.random()*100)+1 // +1 increase the number 
  function getRndInteger(min, max){
-     
- }
 
+ }
+ /*
+  let names = ['jack','mike','joe','michael']
+  result = getRndInteger(1,100)
+  let getRange = getRndInteger(0,3)
+  console.log(getRange)
+  result = names[getRange]
+  let guessNumber=1
+  guessNumber === getRange? console.log('correct'):console.log('incorrect')
+  console.log(result)
+  */
+let names = ['jack','mike','joe','michael']
+result = Math.random()
+let numberRandom =getRandom(0,3)
+result = names[numberRandom]
 console.log(result)
