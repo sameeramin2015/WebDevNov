@@ -45,7 +45,7 @@ result = undefined == null // true
  var myFunc = ()=> console.log('hello') // arrow funciton
  var myFunc1 = function(){console.log('hello')} // function
 
- result = myFunc != myFunc1 // not equal => true
+ result = myFunc != myFunc1 // not equal -> true
 
  var a = 10
  var b = "10"
