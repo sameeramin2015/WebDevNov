@@ -90,7 +90,35 @@ Jing = "Banjan" // updated
  var students = ['x','y','Z','U']
  
  result = students.length
-console.log(result)
+
+ var person = 20
+ result = person == 18? 'yes he is allowed to drink alcohol':'No he is not allowed to drink alcohol'
+ result = person >= 18? 'yes he is allowed to drink alcohol':'No he is not allowed to drink alcohol'
+
+
+ var student = [{
+   name:'Jack',
+   age: 17
+},
+{
+   name:'Mike',
+   age: 17
+}]
+result = student.name != undefined ?(student.age >=18? 'yes he is allowed to drink alcohol':'no he is not allowed to drink alcohol'):'sudent name is undefined '
+
+if (student[0].name == 'Jack' && student[0].age >=18 ){
+   console.log('true')
+}else {
+   console.log ('not true')
+
+}
+if (student[1].age >= 18 && student[1].age <=30){
+   console.log('young man!')
+}else{
+   console.log('not young man !')
+}
+
+//console.log(result)
 
 
 
