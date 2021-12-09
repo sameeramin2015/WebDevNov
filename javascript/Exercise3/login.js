@@ -21,7 +21,7 @@ let users=[{
 {
     username: 'jamal',
     password: 'kamal',
-    role: 'Admin',
+    role: 'user',
     email:'sameer@sameer.com'
 }
 ]
@@ -35,6 +35,7 @@ let users=[{
 function userChck(){
     
     // forEach loop
+    /*
  users.filter(function(user){
 
  if(user.username == username.value && user.password == password.value && user.role == 'Admin' && user.email == email.value ){
@@ -44,7 +45,8 @@ function userChck(){
  }
  })
 }
-/*
+*/
+
 let GetUser = users.filter(function(user){return user.username === username.value && user.password === password.value && user.role === 'Admin' && user.email === email.value})
 
 if(GetUser[0] != undefined){
@@ -54,7 +56,7 @@ if(GetUser[0] != undefined){
 }
 
 }
-*/
+
 /*
 let sBricht;
 function clickHandeler(){
