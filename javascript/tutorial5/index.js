@@ -42,7 +42,7 @@ var number2 = 20
 //console.log(sayMyName('root'))
 
 //function sayMyName(username){
-//    return `Hello your name is ${username}` // bacl tick key ``
+//    return `Hello your name is ${username}` // back tick key ``
 //}
 //console.log(sayMyName('root'))
 

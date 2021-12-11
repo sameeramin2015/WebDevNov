@@ -77,6 +77,8 @@ let variable
 can not be re-declaration or updated
 
 */
+
+
 let Jing = "Angelo"
 Jing = "Banjan" // updated 
 
@@ -117,10 +119,74 @@ if (student[1].age >= 18 && student[1].age <=30){
 }else{
    console.log('not young man !')
 }
+var person = {
+   firstName: 'Sameer',
+   lastName: 'Dalton2',
+   middelName:'Jack',
+   age: 18,
+   livingPlace: 'Alst1',
+   isStudent : true,
+   email: 'sameer@sameer.com'
 
-//console.log(result)
+}
+if(person.age === 18 && person.livingPlace ==='Alst' && person.isStudent=== true){
+   console.log(person)
+}else if(person.lastName === 'Dalton'){
+   console.log('lastname is correct !')
 
+}else if (person.middelname ==='Jack'){
+   console.log('living place is correct')
+}else {
+   console.log('The student dose not exist !')
+}
 
+var userInput = prompt('please enter a number!');
+if(isNaN(userInput)){
+   console.log('please enter a number!')
+}else if(userInput%2 ==0){
+   console.log('the number you entered is even number!')
+}else if(userInput%2 ==1){
+   console.log('the number you entered is odd number!')
+}
 
+var userInput = prompt('please enter a number!');
+var test = isNaN(userInput)? 'This is not a number':(userInput%2 == 0? 'this is even number':'this is odd number');
+console.log(test)
+
+var getUser = document.getElementById('username')
+var message = document.getElementById('message')
+function MyMessage (){
+   message.innerHTML = `Your message is: ${getUser.value}`
+}
+
+var number1 = document.getElementById('num1')
+var number2 = document.getElementById('num2')
+var result = document.getElementById('result')
+
+function Calc (){
+   var getresult = Number (number1.value) + Number(number2.value)
+   result.innerHTML = `Sum is :${getresult}`
+}
+/*
+const obj={
+   a:1,
+   b:'string data',
+   c:true,
+   d:[1,2,3],
+   e:{id:1,title:'this is title'},
+   f:function(){console.log('hello funciton')}
+}
+*/
+
+//console.log(obj.e)
+
+const result1 = document.getElementById('result2')
+
+const AutoController = {   // turnLeft ... property value
+    turnLeft : function(){result1.innerHTML='Turning left'},
+    turnRight : function(){result1.innerHTML ='Turning right'},
+    forward : function(){result1.innerHTML='Forward'},
+    backward : function(){result1.innerHTML='backward...'},
+}
 
 

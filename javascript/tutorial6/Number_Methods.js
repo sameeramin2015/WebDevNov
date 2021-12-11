@@ -1,5 +1,11 @@
 /*
+Number()
+parseInt()
+toFixed()
+isFinite()
+parseFloat
 */
+
 var Result;
 var laptop_price = 29.999
 Result = Number("10"); // convert string to number
