@@ -1,4 +1,4 @@
-[
+let users = [
     {
       "id": 1,
       "name": "Leanne Graham",
@@ -231,3 +231,7 @@
     }
   ]
   
+  users.forEach(function(user){
+    let respon = `Street:${user.address.street}\nSuite:${user.address.suite}\nCity:${user.address.city}\nGeolocation:${user.address.geo.lat}/${user.address.geo.lng}`
+    
+  })
