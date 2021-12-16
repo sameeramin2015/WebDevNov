@@ -47,4 +47,13 @@ let value;
  value.href="google.com";
  value = findAll('div');
 
+ value =findAll('.delete-item') // return nodelist
+ value.forEach(btn=>{
+     console.log(btn)
+     btn.addEventListener('click',function(){
+     //e.preventDefault();
+     console.log('hello click!!!')
+     alert('1')
+     })
+ })
 console.log(value)
