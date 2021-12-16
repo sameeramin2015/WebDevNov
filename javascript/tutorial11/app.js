@@ -25,16 +25,21 @@ let td = elGen('td');
 
 // thead begin
 table.appendChild(tHead)
-th.innerText="name"
-trOfthead.appendChild(th)
 tHead.appendChild(trOfthead)
+trOfthead.appendChild(th)
+th.innerText="name"
+
+
 // thead end
 
 // tbody
-td.innerText="jack"
-trOfTbody.appendChild(td)
-tBody.appendChild(trOfTbody)
 table.appendChild(tBody)
+tBody.appendChild(trOfTbody)
+trOfTbody.appendChild(td)
+td.innerText="jack"
+
+
+
 
 table.className ="table table-dark"
 document.querySelector('.container').appendChild(table)
