@@ -1,3 +1,4 @@
+
 var entyButton = document.getElementById('btn')
 entyButton.addEventListener("click", displayInTable);
 
@@ -33,9 +34,52 @@ Cell2.innerHTML = bookAuthor;
 Cell3.innerHTML = bookCategory;
 Cell4.innerHTML = bookDate;
 Cell5.innerHTML = price;
+Cell6.innerHTML ='<input type="button" name="add" value="Delete" onclick="deletRow(this);"></input>' // add delete button
 row ++;
+
+}
+// delete button function
+function deletRow(row){
+    var s = row.parentNode.parentNode;
+    s.parentNode.removeChild(s)
+
+}
+/* dynamic function dose not work
+const formEl = document.querySelector('form');
+const tbodyEl = document.querySelector('tbody');
+const tableEl = document.querySelector('table');
+
+function addDataToTable (e){
+    e.preventDefault();
+    const bookName = document.getElementById('book_name').value;
+    const bookAuthor = document.getElementById('book_author').value;
+    const bookCategory = document.getElementById('book_category').value;
+    const bookDate = document.getElementById('book_date').value;
+    const price = document.getElementById('price').value;
+
+    tbodyEl.innerHTML +=`
+    <tr>
+        <td>${bookName}</td>
+        <td>${bookAuthor}</td>
+        <td>${bookCategory}</td>
+        <td>${bookDate}</td>
+        <td>${price}</td>
+        <td><button class='deletbtn'>Delete</button></td>
+    </tr>
+    `;
 }
 
+function deletRow(e){
+if(!e.target.classList.contains('deletbtn')){
+    return;
+}
+const btn = e.target;
+btn.closest("tr").remove();
+
+}
+formEl.addEventListener("submit", addDataToTable);
+tableEl.addEventListener("click", deletRow);
+*/
 
 
 
@@ -47,5 +91,6 @@ row ++;
 
 
 
-var btnBook= document.getElementsByClassName('addbookbtn')
+
+
 
