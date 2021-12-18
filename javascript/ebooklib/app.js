@@ -35,7 +35,7 @@ Cell3.innerHTML = bookCategory;
 Cell4.innerHTML = bookDate;
 Cell5.innerHTML = price;
 Cell6.innerHTML ='<input type="button" name="add" value="Delete" onclick="deletRow(this);"></input>' // add delete button
-row ++;
+
 
 }
 // delete button function
