@@ -21,8 +21,12 @@ function getItems(){
         generateItems(items);
     })
 }
-
-
+// delet items
+function TestRemove(getEl){
+    //  e.preventDefault();
+      console.log(getEl.parentElement.parentElement.parentElement.parentElement)
+      getEl.parentElement.parentElement.parentElement.parentElement.remove()
+  }
 
 function generateItems(items) {
 
@@ -31,13 +35,14 @@ function generateItems(items) {
         itemsHTML += `
         <div class="todo-item">
                     <div class="check">
-                        <div data-id="${item.id}"class="check-mark">
+                        <div data-id="${item.id}"class="check-mark ${item.status == "completed" ? "checked":""}">
                             <img src="./assets/icon-check.svg">
                         </div>
                     </div>
-                    <div class="todo-text">
+                    <div class="todo-text ${item.status == "completed" ? "checked":""}">
                         ${item.text}
                     </div>
+                    <!--<button type="button" class="btn btn-primary btn-sm w-20 bg-danger rounded-1 onClick="TestRemove(getEl)">Delete</button>-->
         </div>
         `
     })
@@ -67,7 +72,7 @@ function markCompleted(id) {
                 item.update({
                     status: "completed"
                 })
-            }else if(status =="completed"){
+            } else if(status =="completed"){
                 item.update({
                     status: "active"
                 })
@@ -79,3 +84,16 @@ function markCompleted(id) {
     //console.log("mark completed");
 }
 getItems();
+
+const database = firebase.database();
+const rootRef = database.ref('todo-items')
+
+function remove() {
+    var todo = document.getElementById('todo-items').value
+    database.ref('todo-items').remove()
+    
+}
+//var delet = document.querySelector('.items-clear').addEventListener('click', (e)=>{
+   // e.preventDefault();
+   // rootRef.child(id.value).remove();
+//});
