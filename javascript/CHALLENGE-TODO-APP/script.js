@@ -1,3 +1,10 @@
+const itemsLeft = document.querySelector('.items-left');
+const clearCompleted = document.querySelector('.items-clear span');
+
+
+
+
+
 function addItem(event){
     event.preventDefault();
     let text = document.getElementById("todo-input");
@@ -9,7 +16,7 @@ function addItem(event){
 }
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) =>{
-        console.log(snapshot);
+        //console.log(snapshot);
         let items = [];
         snapshot.docs.forEach((doc) =>{
             items.push({
@@ -24,8 +31,8 @@ function getItems(){
 // delet items
 function TestRemove(getEl){
     //  e.preventDefault();
-      console.log(getEl.parentElement.parentElement.parentElement.parentElement)
-      getEl.parentElement.parentElement.parentElement.parentElement.remove()
+      console.log(getEl.parentElement.parentElement.parentElement)
+      getEl.parentElement.parentElement.parentElement.remove()
   }
 
 function generateItems(items) {
@@ -42,16 +49,22 @@ function generateItems(items) {
                     <div class="todo-text ${item.status == "completed" ? "checked":""}">
                         ${item.text}
                     </div>
-                    <!--<button type="button" class="btn btn-primary btn-sm w-20 bg-danger rounded-1 onClick="TestRemove(getEl)">Delete</button>-->
+                    <button type="button" onClick="remove(this)">X</button>
         </div>
         `
+        
     })
 
     document.querySelector(".todo-items").innerHTML = itemsHTML;
     createEventListeners();
+    //itemsCount(1);
     
 }
 
+//function itemsCount(number) {
+    //itemsLeft.innerText = + itemsLeft.innerText + number;
+    
+//}
 function createEventListeners() {
     let todoCheckMarks = document.querySelectorAll(".todo-item .check-mark")
     todoCheckMarks.forEach((checkMark) =>{
@@ -84,16 +97,31 @@ function markCompleted(id) {
     //console.log("mark completed");
 }
 getItems();
-
 const database = firebase.database();
-const rootRef = database.ref('todo-items')
+const rootRef = database.ref('todo-items');
 
+clearCompleted.addEventListener('click',(e) =>{
+    e.preventDefault();
+    rootRef(todo-items.value).remove();
+
+});
+
+/*
 function remove() {
-    var todo = document.getElementById('todo-items').value
-    database.ref('todo-items').remove()
-    
+    var todoItem = document.getElementById('todo-input').value;
+    database.ref(todo-items).remove();
 }
+*/
+
+/*
+document.querySelector('.items-clear').addEventListener('click',e=>{
+    e.preventDefault();
+    database.ref('todo-items/' + todo-item).remove()
+    itemsHTML=""
+})
+*/
+
 //var delet = document.querySelector('.items-clear').addEventListener('click', (e)=>{
-   // e.preventDefault();
-   // rootRef.child(id.value).remove();
+  // e.preventDefault();
+   //database.ref('todo-items').remove()
 //});
