@@ -1,9 +1,3 @@
-const itemsLeft = document.querySelector('.items-left');
-const clearCompleted = document.querySelector('.items-clear span');
-
-
-
-
 
 function addItem(event){
     event.preventDefault();
@@ -13,7 +7,7 @@ function addItem(event){
         status: "active"
     })
     text.value = "";
-    //countAll()
+    countAll()
 }
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) =>{
@@ -31,7 +25,7 @@ function getItems(){
 }
 // count items from firebase
 function countAll() {
-    console.log("runningcountAll");
+    //console.log("runningcountAll");
     db.collection("todo-items")
       .get()
       .then(snap => {
@@ -55,7 +49,7 @@ function generateItems(items) {
                     <div class="todo-text ${item.status == "completed" ? "checked":""}">
                         ${item.text}
                     </div>
-                    <span id="spn" onClick="remove(this)">X</span>
+                    <span onClick="deleteOne"><img id="bin" src="./assets/bin.jpg" alt="icon-bin.svg" ></span>
         </div>
         `
         
@@ -63,23 +57,31 @@ function generateItems(items) {
 
     document.querySelector(".todo-items").innerHTML = itemsHTML;
     createEventListeners();
-    //itemsCount(1);
+    
     
 }
 
-//function itemsCount(number) {
-    //itemsLeft.innerText = + itemsLeft.innerText + number;
-    
-//}
+function deleteOne(id) {
+    let item = db.collection("todo-items").doc(id);
+    item.delete();
+    countAll();
+  } 
+
 function createEventListeners() {
     let todoCheckMarks = document.querySelectorAll(".todo-item .check-mark")
+    
     todoCheckMarks.forEach((checkMark) =>{
         checkMark.addEventListener("click", function(){
             markCompleted(checkMark.dataset.id); 
-        })
-
-    })
+        });
+    });
+        item.forEach(bin => {
+            bin.addEventListener("click", function () {
+              deleteOne(bin.dataset.id);
+            });
+    });
 }
+
 function markCompleted(id) {
     // it comes from a database
     let item = db.collection("todo-items").doc(id);
@@ -102,7 +104,7 @@ function markCompleted(id) {
     //console.log(id);
     //console.log("mark completed");
 }
-function deletAllItem() {
+function deletCompleted() {
     var item = db.collection("todo-items").where("status", "==", "completed");
     item.get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
@@ -110,28 +112,25 @@ function deletAllItem() {
       });
       countAll();
     });
-    console.log("itemMC" + JSON.stringify(item));
+    
+  }
+
+  function deletAllItem() {
+    var item = db.collection("todo-items")
+    item.get().then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
+        doc.ref.delete();
+      });
+      countAll();
+    });
+    
   }
 getItems();
 countAll();
 
 
-/*
-function remove() {
-    var todoItem = document.getElementById('todo-input').value;
-    database.ref(todo-items).remove();
-}
-*/
 
-/*
-document.querySelector('.items-clear').addEventListener('click',e=>{
-    e.preventDefault();
-    database.ref('todo-items/' + todo-item).remove()
-    itemsHTML=""
-})
-*/
 
-//var delet = document.querySelector('.items-clear').addEventListener('click', (e)=>{
-  // e.preventDefault();
-   //database.ref('todo-items').remove()
-//});
+
+
+

@@ -6,7 +6,7 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-color: darkred;
+  background-color: darkslategray;
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@ body {
 }
 
 .title {
-  color: white;
+  color: darkslategray;
   letter-spacing: 10px;
   font-size: 50px;
   font-weight: bold;
@@ -213,4 +213,15 @@ body {
   padding-top: 25px;
   padding-left: 600px;
   padding-right: 50px;
+}
+#bg {
+height: 300px;
+}
+#bin{
+  display: flex;
+  position: inherit;
+  height: 60px;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 400px;
 }
