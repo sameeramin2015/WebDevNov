@@ -13,6 +13,7 @@ function addItem(event){
         status: "active"
     })
     text.value = "";
+    //countAll()
 }
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) =>{
@@ -28,12 +29,17 @@ function getItems(){
         generateItems(items);
     })
 }
-// delet items
-function TestRemove(getEl){
-    //  e.preventDefault();
-      console.log(getEl.parentElement.parentElement.parentElement)
-      getEl.parentElement.parentElement.parentElement.remove()
+// count items from firebase
+function countAll() {
+    console.log("runningcountAll");
+    db.collection("todo-items")
+      .get()
+      .then(snap => {
+        size = snap.size;
+        document.getElementById("demo").innerHTML = size;
+      });
   }
+
 
 function generateItems(items) {
 
@@ -49,7 +55,7 @@ function generateItems(items) {
                     <div class="todo-text ${item.status == "completed" ? "checked":""}">
                         ${item.text}
                     </div>
-                    <button type="button" onClick="remove(this)">X</button>
+                    <span id="spn" onClick="remove(this)">X</span>
         </div>
         `
         
@@ -96,15 +102,19 @@ function markCompleted(id) {
     //console.log(id);
     //console.log("mark completed");
 }
+function deletAllItem() {
+    var item = db.collection("todo-items").where("status", "==", "completed");
+    item.get().then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
+        doc.ref.delete();
+      });
+      countAll();
+    });
+    console.log("itemMC" + JSON.stringify(item));
+  }
 getItems();
-const database = firebase.database();
-const rootRef = database.ref('todo-items');
+countAll();
 
-clearCompleted.addEventListener('click',(e) =>{
-    e.preventDefault();
-    rootRef(todo-items.value).remove();
-
-});
 
 /*
 function remove() {

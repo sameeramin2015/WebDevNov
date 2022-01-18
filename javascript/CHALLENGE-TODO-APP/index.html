@@ -18,7 +18,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-    
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="background-image">
@@ -82,7 +83,9 @@
             </div>
             <div class="todo-items-info">
                 <div class="items-left">
-                    5 items left
+                    
+                    <span id="demo"></span> items left
+                   
                 </div>
                 <div class="items-statuses">
                     <span class="active">All</span>
@@ -90,13 +93,14 @@
                     <span>Completed</span>
                 </div>
                 <div class="items-clear">
-                    <span>Clear completed</span>
+                    <span onClick="deletAllItem()">Clear completed</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="firebase.js"></script>
-    <script src="script.js"></script>
+<script>
+  
+</script>
+    
 </body>
 </html>
