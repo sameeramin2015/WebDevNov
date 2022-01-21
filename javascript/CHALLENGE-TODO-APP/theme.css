@@ -14,7 +14,8 @@ body {
 	transition: background 0.2s linear;
 }
 
-body.dark {
+body.dark{
+	
 	background: hsl(235, 21%, 11%);
 }
 
