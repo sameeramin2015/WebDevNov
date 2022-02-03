@@ -1,14 +1,12 @@
 var character = document.getElementById("character");
-var block = document.getElementById("block");
+// var block = document.getElementById("block");
+var image = document.getElementById("addimage");
 var counter = 0;
 var i = 0;
 var blockReach = false;
 //var letter =["a","b","c","d"]
-var letter = ["images/test.jpg", "images/test1.jpg"];
-//letter[0] = new Image();
-//letter[0].src = "images/test.jpg";
-//letter[1] = new Image();
-//letter[1].src = "images/test1.jpg";
+var letter = [`<img src="test.jpg"/>`, `<img src="test1.jpg"/>`];
+
 function jump() {
   if (character.classList == "animate") {
     return;
@@ -23,14 +21,16 @@ var checkDead = setInterval(function () {
   let characterTop = parseInt(
     window.getComputedStyle(character).getPropertyValue("top")
   );
+
   let blockLeft = parseInt(
-    window.getComputedStyle(block).getPropertyValue("left")
+    window.getComputedStyle(image).getPropertyValue("left")
   );
+
   if (blockLeft < 20 && blockLeft > -20 && characterTop >= 130) {
-    block.style.animation = "none";
+    image.style.animation = "none";
     alert("Game Over. score: " + Math.floor(counter / 100));
-    block.innerHTML = letter[i];
-    block.style.animation = "block 3s infinite linear";
+    letterChanger();
+    image.style.animation = "block 3s infinite linear";
   } else if (blockLeft === 0 && !blockReach) {
     letterChanger();
     blockReach = true;
@@ -44,13 +44,17 @@ var checkDead = setInterval(function () {
 
 function letterChanger() {
   i++;
-  if (i === letter.length) i = 0;
-  letterUpdate();
+  console.log(i);
+
+  if (i === letter.length) {
+    i = 0;
+  }
+  addImage();
 }
 
-
-
-
 function letterUpdate() {
-  block.innerHTML = letter[i];
+  image.innerHTML = letter[i];
+}
+function addImage() {
+  image.innerHTML = letter[i];
 }

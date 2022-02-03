@@ -1,27 +1,32 @@
+body{
+  background-color:  hsl(235, 24%, 19%);
+}
 * {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
 }
 .game {
-  width: 500px;
-  height: 200px;
-  border: 1px solid black;
-  margin: auto;
+  background-color: white;
+  margin-top: 200px;
+  margin-left: 480px;
+  margin-right: 480px,;
+  border: 15px solid black;
+  width: 800px;
+  height: 300px;
+  
 }
 
-#block img {
-  max-width: 100%;
-}
+
 #character {
   width: 20px;
-  height: 50px;
-  background-color: rgb(183, 0, 255);
+  height: 100px;
+  background-color:darkred;
   position: relative;
-  top: 150px;
+  top: 180px;
 }
 .animate {
-  animation: jump 1s linear;
+  animation: jump 5s linear;
 }
 @keyframes jump {
   0% {
@@ -38,18 +43,18 @@
   }
 }
 
-#block {
-  background-color: blue;
-  color: white;
-  font-size: 15px;
+#addimage {
   display: flex;
+ /* background-color: indianred;*/
+  color:black;
+  font-size: 50px;
   justify-content: center;
   width: 50px;
   height: 50px;
   position: relative;
-  top: 130px;
+  top: 100px;
   left: 500px;
-  animation: block 6s infinite linear;
+  animation: block 4s infinite linear;
 }
 @keyframes block {
   0% {
@@ -62,8 +67,4 @@
 p {
   text-align: center;
 }
-img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
+
